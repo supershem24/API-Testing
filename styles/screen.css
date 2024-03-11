@@ -1,9 +1,15 @@
 body {
     font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
+    color: #212431;
+    background: #9EEEEE;
     padding: 0 40px;
     text-align: center;
+}
+
+section{
+    background:#F2F2F2;
+    margin: 16px;
+    padding: 16px;
 }
 
 nav {
@@ -31,20 +37,4 @@ nav ul li a {
     color: #EAE8FF;
     text-decoration: none;
     font-size: 1.2em;
-}
-
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
-}
-
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-img.about {
-    opacity: 0.5;
 }

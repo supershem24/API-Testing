@@ -1,8 +1,25 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: How to make Pizza
 ---
 
-<div x-data="{pizzaImage: $fetchjson('https://dummyjson.com/recipes/1', jsonItem='image')}">
-	<img alt="thumbnail" x-bind:src="pizzaImage" />
-</div>
+<section>
+	<h1 class="text-[8em]">How to make Pizza</h1>
+
+	<div x-data="{pizzaImage: $fetchjson('https://dummyjson.com/recipes/1', jsonItem='image'),
+	pizzaInstructions: $fetchjson('https://dummyjson.com/recipes/1', jsonItem='instructions'),
+	pizzaIngredients: $fetchjson('https://dummyjson.com/recipes/1', jsonItem='ingredients')
+	}">
+		<img class="mx-auto h-128 w-128" alt="thumbnail" x-bind:src="pizzaImage" />
+
+		<h2 class="text-[4em]">What you'll need:</h2>
+		<template x-for="ingredient in pizzaIngredients">
+			<li x-text="ingredient"></li>
+		</template>
+
+		<h2 class="text-[4em]">Instructions:</h2>
+		<template x-for="instruction in pizzaInstructions">
+			<p x-text="instruction"></p>
+		</template>
+	</div>
+</section>
